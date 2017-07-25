@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'glpi/sdk/ruby/version'
+require 'glpi/sdk/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'glpi-sdk-ruby'
-  spec.version       = Glpi::Sdk::Ruby::VERSION
+  spec.version       = GLPI::SDK::VERSION
   spec.authors       = ['Filipe Menezes']
   spec.email         = ['filipepmenezes@gmail.com']
 
