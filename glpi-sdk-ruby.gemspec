@@ -1,4 +1,3 @@
-# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'glpi/sdk/version'
@@ -9,13 +8,14 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Filipe Menezes']
   spec.email         = ['filipepmenezes@gmail.com']
 
-  spec.summary       = %q{GLPI SDK for Ruby}
-  spec.description   = %q{A Ruby library for the GLPI API}
+  spec.summary       = 'GLPI SDK for Ruby'
+  spec.description   = 'A Ruby library for the GLPI API'
   spec.homepage      = 'https://trulymanager.com'
   spec.license       = 'MIT'
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the
+  # 'allowed_push_host' to allow pushing to a single host or delete this section
+  # to allow pushing to any host.
   if spec.respond_to?(:metadata)
     spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
   else
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
       'public gem pushes.'
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
   spec.bindir        = 'exe'
