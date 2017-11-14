@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'GLPI SDK for Ruby'
   spec.description   = 'A Ruby library for the GLPI API'
-  spec.homepage      = 'https://trulymanager.com'
+  spec.homepage      = 'https://github.com/truly-systems/glpi-sdk-ruby'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the
