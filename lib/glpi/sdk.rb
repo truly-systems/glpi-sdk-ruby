@@ -1,4 +1,3 @@
-require 'pry'
 require 'httparty'
 
 # Autoload ruby files
