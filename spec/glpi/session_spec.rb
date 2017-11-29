@@ -10,13 +10,19 @@ RSpec.describe GLPI::SDK::Session do
     GLPI::SDK::Session.new(url, app_token, username, password)
   end
 
+  context '#initialize', :vcr do
+    it 'stores the session token on token variable' do
+      expect(session.token).not_to be_nil
+    end
+  end
+
   context '#init', :vcr do
     it 'returns a session token' do
       token = session.init
       expect(token).not_to be_nil
     end
 
-    it 'sets token variable with response value' do
+    it 'stores the session token on token variable' do
       session.init
       expect(session.token).not_to be_nil
     end

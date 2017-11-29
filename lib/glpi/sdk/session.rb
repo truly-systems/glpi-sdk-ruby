@@ -3,37 +3,36 @@ module GLPI
     class Session
       include HTTParty
 
-      attr_accessor :token
+      attr_accessor :token, :app_token
 
       def initialize(url, app_token, username, password)
         @url = url
         @app_token = app_token
         @auth = { username: username, password: password }
+
+        init
       end
 
       # Request a session token to uses other api endpoints
       def init
-        options = {
-          headers: { 'App-Token' => @app_token },
-          basic_auth: @auth
-        }
-
-        response = request(:get, '/initSession', options)
+        response = request :get, '/initSession', basic_auth: @auth
         self.token = response['session_token']
       end
 
       # Destroy a session identified by a session token.
       def kill
-        options = {
-          headers: { 'App-Token' => @app_token, 'Session-Token' => token }
-        }
-
-        request(:get, '/killSession', options)
+        request :get, '/killSession'
         self.token = nil
       end
 
       def request(method, endpoint, options = {})
         options[:base_uri] = @url
+
+        options[:headers] = options.fetch(:headers, {})
+        options[:headers]['Content-Type'] = 'application/json'
+        options[:headers]['App-Token'] = @app_token
+        options[:headers]['Session-Token'] = @token if @token
+
         response = self.class.send(method, endpoint, options)
 
         unless response.success?
