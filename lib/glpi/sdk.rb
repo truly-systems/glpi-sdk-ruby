@@ -1,12 +1,16 @@
 require 'httparty'
 
-# Autoload ruby files
-Dir[File.join(File.dirname(__FILE__), 'sdk', '*.rb')].each do |file|
-  require file
-end
+require 'glpi/sdk/version'
+require 'glpi/sdk/util/hash_converter'
+require 'glpi/sdk/session'
+require 'glpi/sdk/error'
+require 'glpi/sdk/resource'
+
+require 'glpi/sdk/resources/profile'
+require 'glpi/sdk/resources/ticket'
+require 'glpi/sdk/resources/user'
 
 module GLPI
   module SDK
-    # Your code goes here...
   end
 end
