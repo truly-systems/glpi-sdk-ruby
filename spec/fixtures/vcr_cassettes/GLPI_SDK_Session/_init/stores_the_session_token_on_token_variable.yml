@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Dec 2017 02:38:12 GMT
+      - Fri, 08 Dec 2017 02:38:11 GMT
       Server:
       - Apache/2.4.27 (Unix) PHP/7.1.7
       X-Powered-By:
@@ -40,7 +40,7 @@ http_interactions:
       - application/json; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"session_token":"4c542728c6112a14bca77b64c823ecf4"}'
+      string: '{"session_token":"a2118130e111f7f154a463bb0d3c67bb"}'
     http_version: 
   recorded_at: Fri, 08 Dec 2017 02:38:12 GMT
 - request:
@@ -55,7 +55,7 @@ http_interactions:
       App-Token:
       - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
       Session-Token:
-      - 4c542728c6112a14bca77b64c823ecf4
+      - a2118130e111f7f154a463bb0d3c67bb
       Authorization:
       - Basic Z2xwaTpnbHBp
   response:
@@ -85,50 +85,7 @@ http_interactions:
       - application/json; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"session_token":"5495313aa9cf233819ca9c8e67f7f72c"}'
+      string: '{"session_token":"a5acdace8a46a7be05be7a3fb69d5b97"}'
     http_version: 
-  recorded_at: Fri, 08 Dec 2017 02:38:13 GMT
-- request:
-    method: get
-    uri: http://localhost/glpi/apirest.php/killSession
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      App-Token:
-      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
-      Session-Token:
-      - 5495313aa9cf233819ca9c8e67f7f72c
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Fri, 08 Dec 2017 02:38:13 GMT
-      Server:
-      - Apache/2.4.27 (Unix) PHP/7.1.7
-      X-Powered-By:
-      - PHP/7.1.7
-      Expires:
-      - Mon, 26 Jul 1997 05:00:00 GMT
-      Cache-Control:
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
-      Access-Control-Expose-Headers:
-      - content-type, content-range, accept-range
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Length:
-      - '0'
-      Content-Type:
-      - application/json; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: ''
-    http_version: 
-  recorded_at: Fri, 08 Dec 2017 02:38:13 GMT
+  recorded_at: Fri, 08 Dec 2017 02:38:12 GMT
 recorded_with: VCR 3.0.3

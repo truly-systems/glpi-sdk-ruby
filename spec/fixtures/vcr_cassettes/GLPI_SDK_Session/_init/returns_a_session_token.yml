@@ -7,6 +7,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      Content-Type:
+      - application/json
       App-Token:
       - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
       Authorization:
@@ -17,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 01 Nov 2017 19:20:41 GMT
+      - Fri, 08 Dec 2017 02:38:11 GMT
       Server:
       - Apache/2.4.27 (Unix) PHP/7.1.7
       X-Powered-By:
@@ -30,13 +32,60 @@ http_interactions:
       - no-cache
       Access-Control-Expose-Headers:
       - content-type, content-range, accept-range
+      Access-Control-Allow-Origin:
+      - "*"
       Content-Length:
       - '52'
       Content-Type:
       - application/json; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"session_token":"5a718a4319c528c82410967148e08941"}'
+      string: '{"session_token":"9121d36397e7c0c92afba0935e323b09"}'
     http_version: 
-  recorded_at: Wed, 01 Nov 2017 19:20:41 GMT
+  recorded_at: Fri, 08 Dec 2017 02:38:11 GMT
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/initSession
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Session-Token:
+      - 9121d36397e7c0c92afba0935e323b09
+      Authorization:
+      - Basic Z2xwaTpnbHBp
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:11 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"session_token":"c0dc8751c9d612b22ab9205abdca68d6"}'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:11 GMT
 recorded_with: VCR 3.0.3

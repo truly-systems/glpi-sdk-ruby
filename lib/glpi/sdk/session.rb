@@ -25,6 +25,26 @@ module GLPI
         self.token = nil
       end
 
+      # Return the current active profile
+      def active_profile
+        request :get, '/getActiveProfile'
+      end
+
+      # Return active entities of current logged user
+      def active_entities
+        request :get, '/getActiveEntities'
+      end
+
+      # Return the current php $_SESSION
+      def full_session
+        request :get, '/getFullSession'
+      end
+
+      # Return the current $CFG_GLPI
+      def glpi_config
+        request :get, '/getGlpiConfig'
+      end
+
       def request(method, endpoint, options = {})
         options[:base_uri] = @url
 

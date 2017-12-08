@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Dec 2017 02:38:12 GMT
+      - Fri, 08 Dec 2017 02:38:13 GMT
       Server:
       - Apache/2.4.27 (Unix) PHP/7.1.7
       X-Powered-By:
@@ -40,57 +40,12 @@ http_interactions:
       - application/json; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"session_token":"4c542728c6112a14bca77b64c823ecf4"}'
-    http_version: 
-  recorded_at: Fri, 08 Dec 2017 02:38:12 GMT
-- request:
-    method: get
-    uri: http://localhost/glpi/apirest.php/initSession
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      App-Token:
-      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
-      Session-Token:
-      - 4c542728c6112a14bca77b64c823ecf4
-      Authorization:
-      - Basic Z2xwaTpnbHBp
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Fri, 08 Dec 2017 02:38:12 GMT
-      Server:
-      - Apache/2.4.27 (Unix) PHP/7.1.7
-      X-Powered-By:
-      - PHP/7.1.7
-      Expires:
-      - Mon, 26 Jul 1997 05:00:00 GMT
-      Cache-Control:
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
-      Access-Control-Expose-Headers:
-      - content-type, content-range, accept-range
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Length:
-      - '52'
-      Content-Type:
-      - application/json; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: '{"session_token":"5495313aa9cf233819ca9c8e67f7f72c"}'
+      string: '{"session_token":"6f0056b4cf9e3d80eca9e2185946b2b2"}'
     http_version: 
   recorded_at: Fri, 08 Dec 2017 02:38:13 GMT
 - request:
     method: get
-    uri: http://localhost/glpi/apirest.php/killSession
+    uri: http://localhost/glpi/apirest.php/getActiveEntities
     body:
       encoding: US-ASCII
       string: ''
@@ -100,7 +55,7 @@ http_interactions:
       App-Token:
       - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
       Session-Token:
-      - 5495313aa9cf233819ca9c8e67f7f72c
+      - 6f0056b4cf9e3d80eca9e2185946b2b2
   response:
     status:
       code: 200
@@ -123,12 +78,12 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Content-Length:
-      - '0'
+      - '83'
       Content-Type:
       - application/json; charset=UTF-8
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"active_entity":{"id":0,"active_entity_recursive":1,"active_entities":[{"id":0}]}}'
     http_version: 
   recorded_at: Fri, 08 Dec 2017 02:38:13 GMT
 recorded_with: VCR 3.0.3
