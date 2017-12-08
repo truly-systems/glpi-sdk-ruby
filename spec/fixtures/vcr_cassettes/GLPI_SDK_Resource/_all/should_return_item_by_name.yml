@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/initSession
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Authorization:
+      - Basic Z2xwaTpnbHBp
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:06 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"session_token":"b721a93835f6ae6afec0a9d8f4ea7522"}'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:06 GMT
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/Blacklist?searchText%5Bname%5D=empty%20MAC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Session-Token:
+      - b721a93835f6ae6afec0a9d8f4ea7522
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:06 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Accept-Range:
+      - Blacklist 1000
+      Content-Range:
+      - 0-20/1
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '101'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '[{"id":4,"type":2,"name":"empty MAC","value":"","comment":null,"date_mod":null,"date_creation":null}]'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:06 GMT
+recorded_with: VCR 3.0.3

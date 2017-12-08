@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/initSession
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Authorization:
+      - Basic Z2xwaTpnbHBp
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:05 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"session_token":"b6fa71334f5dfd15dc53d3cb73d88996"}'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:05 GMT
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/Blacklist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Session-Token:
+      - b6fa71334f5dfd15dc53d3cb73d88996
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:05 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Accept-Range:
+      - Blacklist 1000
+      Content-Range:
+      - 0-20/4
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '414'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"type":1,"name":"empty IP","value":"","comment":null,"date_mod":null,"date_creation":null},{"id":2,"type":1,"name":"localhost","value":"127.0.0.1","comment":null,"date_mod":null,"date_creation":null},{"id":3,"type":1,"name":"zero
+        IP","value":"0.0.0.0","comment":null,"date_mod":null,"date_creation":null},{"id":4,"type":2,"name":"empty
+        MAC","value":"","comment":null,"date_mod":null,"date_creation":null}]'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:06 GMT
+recorded_with: VCR 3.0.3

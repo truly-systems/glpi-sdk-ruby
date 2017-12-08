@@ -1,0 +1,134 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/initSession
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Authorization:
+      - Basic Z2xwaTpnbHBp
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:07 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"session_token":"2885391d4555022f965d0121ae202f08"}'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:07 GMT
+- request:
+    method: put
+    uri: http://localhost/glpi/apirest.php/User/29
+    body:
+      encoding: UTF-8
+      string: '{"input":{"firstname":"Baz"}}'
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Session-Token:
+      - 2885391d4555022f965d0121ae202f08
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:07 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '26'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '[{"29":true,"message":""}]'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:07 GMT
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/User/29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Session-Token:
+      - 2885391d4555022f965d0121ae202f08
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:07 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Last-Modified:
+      - Fri, 08 Dec 2017 02:38:07 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '1892'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"id":29,"name":"foo","phone":null,"phone2":null,"mobile":null,"realname":"Bar","firstname":"Baz","locations_id":0,"language":null,"use_mode":0,"list_limit":null,"is_active":1,"comment":null,"auths_id":0,"authtype":0,"last_login":null,"date_mod":"2017-12-08
+        02:38:07","date_sync":null,"is_deleted":0,"profiles_id":0,"entities_id":0,"usertitles_id":0,"usercategories_id":0,"date_format":null,"number_format":null,"names_format":null,"csv_delimiter":null,"is_ids_visible":null,"use_flat_dropdowntree":null,"show_jobs_at_login":null,"priority_1":null,"priority_2":null,"priority_3":null,"priority_4":null,"priority_5":null,"priority_6":null,"followup_private":null,"task_private":null,"default_requesttypes_id":null,"password_forget_token":null,"password_forget_token_date":null,"user_dn":null,"registration_number":null,"show_count_on_tabs":null,"refresh_ticket_list":null,"set_default_tech":null,"personal_token":null,"personal_token_date":null,"api_token":null,"api_token_date":null,"display_count_on_home":null,"notification_to_myself":null,"duedateok_color":null,"duedatewarning_color":null,"duedatecritical_color":null,"duedatewarning_less":null,"duedatecritical_less":null,"duedatewarning_unit":null,"duedatecritical_unit":null,"display_options":null,"is_deleted_ldap":0,"pdffont":null,"picture":null,"begin_date":null,"end_date":null,"keep_devices_when_purging_item":null,"privatebookmarkorder":null,"backcreated":null,"task_state":null,"layout":null,"palette":null,"ticket_timeline":null,"ticket_timeline_keep_replaced_tabs":null,"set_default_requester":null,"lock_autolock_mode":null,"lock_directunlock_notification":null,"date_creation":"2017-12-08
+        02:38:07","highcontrast_css":0,"plannings":null,"sync_field":null,"links":[{"rel":"Entity","href":"http://localhost/glpi/apirest.php/Entity/0"},{"rel":"Document_Item","href":"http://localhost/glpi/apirest.php/User/29/Document_Item/"}]}'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:08 GMT
+recorded_with: VCR 3.0.3

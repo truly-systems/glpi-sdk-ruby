@@ -1,0 +1,136 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/initSession
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Authorization:
+      - Basic Z2xwaTpnbHBp
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:03 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"session_token":"524406ab0175d43db68f0a2556c992ef"}'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:03 GMT
+- request:
+    method: post
+    uri: http://localhost/glpi/apirest.php/Blacklist
+    body:
+      encoding: UTF-8
+      string: '{"input":{"id":29,"type":1,"name":"SDK name test","value":"SDK value
+        test"}}'
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Session-Token:
+      - 524406ab0175d43db68f0a2556c992ef
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:03 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Location:
+      - http://localhost/glpi/apirest.php/Blacklist/29
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '22'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"id":29,"message":""}'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:03 GMT
+- request:
+    method: get
+    uri: http://localhost/glpi/apirest.php/Blacklist/29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      App-Token:
+      - Vhcc3g5udXBcUEDdtdxOxzBkyK9XwF2aJuiUKPeb
+      Session-Token:
+      - 524406ab0175d43db68f0a2556c992ef
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 02:38:03 GMT
+      Server:
+      - Apache/2.4.27 (Unix) PHP/7.1.7
+      X-Powered-By:
+      - PHP/7.1.7
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - content-type, content-range, accept-range
+      Last-Modified:
+      - Fri, 08 Dec 2017 02:38:03 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '152'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"id":29,"type":1,"name":"SDK name test","value":"SDK value test","comment":null,"date_mod":"2017-12-08
+        02:38:03","date_creation":"2017-12-08 02:38:03"}'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 02:38:03 GMT
+recorded_with: VCR 3.0.3
