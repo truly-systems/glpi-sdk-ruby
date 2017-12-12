@@ -1,10 +1,9 @@
 # GLPI SDK for Ruby
 
-[![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+[![Gem](https://img.shields.io/gem/v/glpi-sdk-ruby.svg)](https://rubygems.org/gems/glpi-sdk-ruby)
+[![Gem](https://img.shields.io/gem/dt/glpi-sdk-ruby.svg)](https://rubygems.org/gems/glpi-sdk-ruby)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/glpi/sdk`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby wrapper for [GLPI REST API](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md).
 
 ## Installation
 
@@ -19,18 +18,103 @@ And then execute:
     $ bundle
 
 Or install it yourself as:
-
-    $ gem install glpi-sdk-ruby
+	
+	$ gem install glpi-sdk-ruby
 
 ## Usage
 
-TODO: Write usage instructions here
+### [Init session](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#init-session)
+A session object is mandatory to uses the others GLPI methods.
 
-## Development
+```ruby
+require 'glpi/sdk'
+	
+# Request a session token to uses other GLPI functions
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+url = 'http://path/to/glpi/apirest.php'
+app_token = 'YOUR_APP_TOKEN'
+username = 'YOUR_GLPI_USERNAME'
+password = 'YOUR_GLPI_PASSWORD'
+    
+session = GLPI::SDK::Session.new(url, app_token, username, password)
+session.token
+# => "74e735e494e9613ee50d13135df6d27d"
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### [Kill session](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#kill-session)
+```ruby
+session.kill
+```
+
+### [Get active profile](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#get-active-profile)
+```ruby
+session.active_profile
+```
+
+### [Get active entities](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#get-active-entities)
+```ruby
+session.active_entities
+```
+
+### [Get full GLPI session](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#get-full-session)
+```ruby
+session.full_session
+```
+
+### [Get GLPI config](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#get-glpi-config)
+```ruby
+session.glpi_config
+```
+
+### [Get an item](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#get-an-item)
+```ruby
+ticket = GLPI::SDK::Resource.find(session, 1, 'Ticket')
+ticket.id
+# => 1
+
+ticket.name
+# => "Hello World"
+```
+
+### [Get all items](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#get-all-items)
+```ruby
+tickets = GLPI::SDK::Resource.all(session, item_type: 'Ticket')
+```
+
+### [Create an item](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#add-items)
+```ruby
+ticket = GLPI::SDK::Resource.create(
+  session,
+  name: 'New ticket from SDK',
+  content: 'Ticket created by GLPI SDK',
+  item_type: 'Ticket'
+)
+
+ticket.id
+# => 29
+
+ticket.content
+# => "Ticket created by GLPI SDK"
+```
+
+### [Update an item](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#update-items)
+```ruby
+ticket = GLPI::SDK::Resource.update(
+  session,
+  29,
+  content: 'Content updated by GLPI SDK',
+  item_type: 'Ticket'
+)
+
+ticket.content
+# => "Ticket updated by GLPI SDK"
+```
+
+### [Delete an item](https://github.com/glpi-project/glpi/blob/9.2/bugfixes/apirest.md#delete-items)
+```ruby
+GLPI::SDK::Resource.destroy(session, 29, 'Ticket')
+# => true
+```
 
 ## Contributing
 
@@ -42,4 +126,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## Code of Conduct
 
-Everyone interacting in the Glpi::Sdk::Ruby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/truly-systems/glpi-sdk-ruby/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the GLPI::SDK::Ruby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/truly-systems/glpi-sdk-ruby/blob/master/CODE_OF_CONDUCT.md).
